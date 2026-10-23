@@ -1,0 +1,9 @@
+{
+  "type": "https://eips.ethereum.org/EIPS/eip-8004#registration-v1",
+  "name": "Agent Spend Receipt",
+  "description": "Budget-controlled Celo wallet-data checks with explicit payment evidence levels. Local prototype only; no hosted endpoint or registered identity yet.",
+  "services": [],
+  "active": false,
+  "x402Support": false,
+  "supportedTrust": []
+}

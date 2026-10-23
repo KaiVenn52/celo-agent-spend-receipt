@@ -1,0 +1,20 @@
+{
+  "checkedAt": "2026-10-22T18:55:38.629Z",
+  "passed": true,
+  "transport": "injected provider and verifier only",
+  "signer": "ephemeral test account, never funded",
+  "signedRequestsToInjectedProvider": 1,
+  "mainnetPayments": 0,
+  "realUsers": 0,
+  "checks": [
+    "Wallet connection",
+    "Fixed quote review",
+    "Official SDK unsigned payload",
+    "Browser EIP-712 signature",
+    "Server signer recovery",
+    "Single paid transport invocation",
+    "Independent reconciliation route",
+    "Budget movement"
+  ],
+  "consoleErrors": []
+}

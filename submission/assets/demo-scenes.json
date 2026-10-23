@@ -1,0 +1,32 @@
+{
+  "recordedAt": "2026-10-22T10:19:45.366Z",
+  "scenes": [
+    {
+      "seconds": 1,
+      "label": "Local demo. No payment or user data."
+    },
+    {
+      "seconds": 5,
+      "label": "A wallet snapshot and its synthetic cost are shown separately."
+    },
+    {
+      "seconds": 11,
+      "label": "Replay preserves one service call."
+    },
+    {
+      "seconds": 15,
+      "label": "An insufficient budget prevents the service call."
+    },
+    {
+      "seconds": 20,
+      "label": "A simulated timeout holds the budget. No automatic second payment."
+    },
+    {
+      "seconds": 27,
+      "label": "This is a real unpaid provider quote. Signing is disabled; no funds move."
+    }
+  ],
+  "realPayments": 0,
+  "realWalletSignatures": 0,
+  "disclosure": "Fixture product flow followed by real unsigned quote. Not evidence of mainnet settlement."
+}

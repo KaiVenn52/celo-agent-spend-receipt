@@ -1,0 +1,36 @@
+{
+  "checkedAt": "2026-10-22T19:03:02.546Z",
+  "clientReviewDate": "2026-10-23",
+  "localReady": true,
+  "submissionReady": false,
+  "optional": {
+    "hostedDeployment": false
+  },
+  "gates": {
+    "localTests": true,
+    "build": true,
+    "renderedUi": true,
+    "injectedSigningFlow": true,
+    "publicRepository": false,
+    "identity": false,
+    "mainnetPayment": false,
+    "usefulProviderResult": false,
+    "independentUser": false,
+    "terms": false,
+    "remoteEligibility": false,
+    "registration": false,
+    "finalOwnerApproval": false
+  },
+  "blockers": [
+    "publicRepository",
+    "identity",
+    "mainnetPayment",
+    "usefulProviderResult",
+    "independentUser",
+    "terms",
+    "remoteEligibility",
+    "registration",
+    "finalOwnerApproval"
+  ],
+  "note": "Identity, payment and public-repo gates require the matching read-only verification report. Participant history checks remain separate from human relationship/first-funding review and organizer eligibility judgment."
+}

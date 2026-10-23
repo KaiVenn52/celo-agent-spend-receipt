@@ -1,0 +1,7 @@
+{
+  "reviewDate": "2026-10-22",
+  "command": "npm audit --omit=dev --json",
+  "exitCode": 0,
+  "vulnerabilities": {"info": 0, "low": 0, "moderate": 0, "high": 0, "critical": 0, "total": 0},
+  "scope": "Published npm advisories for production dependencies, not a full security audit"
+}

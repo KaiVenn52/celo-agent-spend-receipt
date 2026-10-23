@@ -1,0 +1,48 @@
+{
+  "checkedAt": "2026-10-22T18:57:56.060Z",
+  "paymentsMade": 0,
+  "signaturesCreated": 0,
+  "catalog": {
+    "error": "The operation was aborted due to timeout"
+  },
+  "unpaidQuote": {
+    "amount": "10000",
+    "token": "USDC",
+    "asset": "0xcebA9300f2b948710d2653dD7B07f33A8B32118C",
+    "chainId": 42220,
+    "payTo": "0x20faAca5F980E29639A0FCC6dcA6988E18ed333B",
+    "payer": "0x1111111111111111111111111111111111111111",
+    "mode": "live",
+    "requestHash": "7e1efa9463dedb5fddce9f610fe416f4e3573c3f6a2359693bd6b23e65bc2771",
+    "expiresAt": 1792695563934,
+    "challengeHash": "0b6409e778b6c1f595a37cd8c70a6574bef1b3e664b6b3bbfaaa84c7842dc90b",
+    "requirements": {
+      "scheme": "exact",
+      "network": "celo",
+      "maxAmountRequired": "10000",
+      "resource": "https://gateway.usebuy.ai/chainstack/celo",
+      "description": "Celo mainnet JSON-RPC, batch of up to 2000 calls",
+      "mimeType": "application/json",
+      "payTo": "0x20faAca5F980E29639A0FCC6dcA6988E18ed333B",
+      "maxTimeoutSeconds": 60,
+      "asset": "0xcebA9300f2b948710d2653dD7B07f33A8B32118C",
+      "extra": {
+        "name": "USDC",
+        "version": "2"
+      }
+    },
+    "note": "Dummy public payer for unsigned quote only; no wallet exists or was funded by this program."
+  },
+  "publicRpc": {
+    "status": 200,
+    "response": {
+      "jsonrpc": "2.0",
+      "result": "0xa4ec",
+      "id": 1
+    },
+    "note": "Read-only chain identification is not paid provider or payment proof."
+  },
+  "publicContractReads": {
+    "error": "Public contract read failed; do not infer token metadata or registry availability from this probe."
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "name": "celo-agent-spend-receipt",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "start": "node src/server.mjs",
+    "test": "node --test test/*.test.mjs",
+    "build": "node scripts/build.mjs",
+    "demo": "node scripts/demo.mjs",
+    "probe": "node scripts/probe.mjs",
+    "test:ui": "node scripts/ui-qa.mjs",
+    "verify": "node scripts/verify.mjs",
+    "identity:review": "node scripts/identity-review.mjs",
+    "readiness": "node scripts/readiness.mjs",
+    "test:ui:signing": "node scripts/ui-live-qa.mjs",
+    "evidence:verify": "node scripts/verify-live-evidence.mjs",
+    "format": "prettier --write \"src/**/*.mjs\" \"scripts/**/*.mjs\" \"test/**/*.mjs\" \"public/*\" package.json",
+    "format:check": "prettier --check \"src/**/*.mjs\" \"scripts/**/*.mjs\" \"test/**/*.mjs\" \"public/*\" package.json"
+  },
+  "dependencies": {
+    "@celo/buy-core": "0.8.3",
+    "viem": "2.57.10"
+  },
+  "devDependencies": {
+    "playwright": "1.64.1",
+    "prettier": "3.9.10"
+  }
+}

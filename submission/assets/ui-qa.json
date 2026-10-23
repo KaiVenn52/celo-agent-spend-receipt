@@ -1,0 +1,28 @@
+{
+  "checkedAt": "2026-10-22T18:55:51.556Z",
+  "clientReviewDate": "2026-10-23",
+  "passed": true,
+  "checks": [
+    "Workspace loads without marketing hero",
+    "Fixture result and separate payment evidence render",
+    "Replay retains one call",
+    "Receipt JSON export",
+    "Session-owned task survives reload",
+    "1280/768/375px have no document overflow",
+    "Budget refusal shown before provider call",
+    "Timeout reserves funds and offers no automatic repayment",
+    "Real unpaid quote visible; signing disabled by owner",
+    "No unexpected console or HTTP errors"
+  ],
+  "consoleErrors": [],
+  "expectedNegativeResponses": [
+    {
+      "url": "http://127.0.0.1:4318/api/demo",
+      "status": 400
+    }
+  ],
+  "method": "Playwright 1.64.1 with installed Chrome; IAB tab creation timed out in prior attempt",
+  "paymentsSent": 0,
+  "walletSignatures": 0,
+  "limitation": "Actual mainnet settlement and ERC-8004 registration require user authorization and remain untested."
+}

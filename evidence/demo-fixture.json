@@ -1,0 +1,49 @@
+{
+  "id": "demo",
+  "budget": 20000,
+  "mode": "fixture",
+  "spent": 10000,
+  "reserved": 0,
+  "available": 10000,
+  "calls": [
+    {
+      "id": "wallet-check",
+      "task": "demo",
+      "fingerprint": "32a8b0c3610f816a7f4e4b7ff49dd589839dacaf2811812eb3f7c89a091b0d69",
+      "requesthash": "7e1efa9463dedb5fddce9f610fe416f4e3573c3f6a2359693bd6b23e65bc2771",
+      "quote": {
+        "amount": "10000",
+        "token": "USDC",
+        "chainId": 42220,
+        "payTo": "0x1111111111111111111111111111111111111111",
+        "mode": "fixture",
+        "requestHash": "7e1efa9463dedb5fddce9f610fe416f4e3573c3f6a2359693bd6b23e65bc2771",
+        "expiresAt": 1792334599865
+      },
+      "amount": 10000,
+      "state": "SETTLED",
+      "evidence": {
+        "level": "fixture",
+        "verifiedOnchain": false
+      },
+      "result": {
+        "summary": "Fixture wallet check completed. No provider was called and no payment was made.",
+        "rpc": [
+          {
+            "id": 1,
+            "result": "0xa4ec"
+          },
+          {
+            "id": 2,
+            "result": "0x16345785d8a0000"
+          },
+          {
+            "id": 3,
+            "result": "0x2a"
+          }
+        ]
+      },
+      "tx": null
+    }
+  ]
+}

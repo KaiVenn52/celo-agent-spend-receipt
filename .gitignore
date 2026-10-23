@@ -1,0 +1,13 @@
+node_modules/
+data/
+dist/
+*.db*
+.env*
+private/
+submission/assets/browser-tmp/
+submission/assets/recordings/
+submission/assets/demo-recording.webm
+submission/assets/product-demo.webm
+submission/assets/ui-failure.json
+submission/assets/failure.png
+*.zip

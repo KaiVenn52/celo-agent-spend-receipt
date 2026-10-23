@@ -1,0 +1,20 @@
+{
+  "checkedAt": "2026-10-22T19:02:59.302Z",
+  "manifestHash": "5fcec3e14b6c2dc4f8f165c70eb25d448cd82512922ec963bafb243bef2d3c1f",
+  "network": "Celo mainnet 42220",
+  "identity": {
+    "verified": false,
+    "error": "Provide the actual identity transaction, owner, numeric Agent ID and approved metadata URI"
+  },
+  "payment": {
+    "verified": false,
+    "error": "Save the actual exported receipt under this project and set payment.receiptFile"
+  },
+  "publicRepository": {
+    "verified": false,
+    "error": "No reviewed public repository URL supplied"
+  },
+  "independentUsers": [],
+  "signaturesCreated": 0,
+  "broadcasts": 0
+}

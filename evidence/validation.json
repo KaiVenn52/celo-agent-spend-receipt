@@ -1,0 +1,15 @@
+{
+  "checkedAt": "2026-10-22T19:02:48.086Z",
+  "clientReviewDate": "2026-10-23",
+  "node": "v24.20.0",
+  "testsPassed": 54,
+  "testsFailed": 0,
+  "build": "passed",
+  "runtimeDependencies": {
+    "@celo/buy-core": "0.8.3",
+    "viem": "2.57.10"
+  },
+  "realPayments": 0,
+  "uiReport": "submission/assets/ui-qa.json",
+  "injectedBrowserReport": "evidence/ui-live-injected.json"
+}

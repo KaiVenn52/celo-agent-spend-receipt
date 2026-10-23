@@ -1,0 +1,23 @@
+1
+00:00:01,000 --> 00:00:04,800
+Local demo. No payment or user data.
+
+2
+00:00:05,000 --> 00:00:10,800
+A wallet snapshot and its synthetic cost are shown separately.
+
+3
+00:00:11,000 --> 00:00:14,800
+Replay preserves one service call.
+
+4
+00:00:15,000 --> 00:00:19,800
+An insufficient budget prevents the service call.
+
+5
+00:00:20,000 --> 00:00:26,800
+A simulated timeout holds the budget. No automatic second payment.
+
+6
+00:00:27,000 --> 00:00:33,700
+This is a real unpaid provider quote. Signing is disabled; no funds move.

@@ -1,0 +1,28 @@
+{
+  "publicRepo": null,
+  "deploymentUrl": null,
+  "registration": {
+    "accepted": false,
+    "event": "agents-on-open-rails"
+  },
+  "identity": {
+    "agentId": null,
+    "owner": null,
+    "transaction": null,
+    "agentURI": null
+  },
+  "payment": {
+    "payer": null,
+    "transaction": null,
+    "providerPayTo": null,
+    "authorizationNonce": null,
+    "usefulResult": false,
+    "receiptFile": null
+  },
+  "independentUsers": [],
+  "ownerReviewedTerms": false,
+  "remoteOnlyEligibilityConfirmed": false,
+  "finalSubmissionApproved": false,
+  "builderWallets": [],
+  "mainFunderWallets": []
+}
