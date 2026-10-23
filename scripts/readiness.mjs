@@ -1,3 +1,4 @@
+import { reviewDate } from './review-date.mjs';
 import { readFileSync, writeFileSync, existsSync } from 'node:fs';
 import { digest } from '../src/ledger.mjs';
 const evidence = JSON.parse(readFileSync('submission/live-evidence.json', 'utf8'));
@@ -47,7 +48,7 @@ const gates = {
 };
 const report = {
   checkedAt: new Date().toISOString(),
-  clientReviewDate: '2026-10-23',
+  clientReviewDate: reviewDate(),
   localReady: ['localTests', 'build', 'renderedUi', 'injectedSigningFlow'].every((k) => gates[k]),
   submissionReady: Object.values(gates).every(Boolean),
   optional: { hostedDeployment: !!evidence.deploymentUrl },

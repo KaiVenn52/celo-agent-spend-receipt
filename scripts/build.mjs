@@ -1,3 +1,4 @@
+import { reviewDate } from './review-date.mjs';
 import { mkdirSync, cpSync, writeFileSync } from 'node:fs';
 import { execFileSync } from 'node:child_process';
 const files = [
@@ -19,7 +20,7 @@ writeFileSync(
   JSON.stringify(
     {
       builtAt: new Date().toISOString(),
-      clientReviewDate: '2026-10-23',
+      clientReviewDate: reviewDate(),
       node: process.version,
       mode: 'fixture-and-pinned-x402-wallet-flow',
       sdk: '@celo/buy-core@0.8.3',

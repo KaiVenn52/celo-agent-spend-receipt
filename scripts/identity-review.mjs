@@ -1,3 +1,4 @@
+import { reviewDate } from './review-date.mjs';
 import { mkdirSync, writeFileSync, readFileSync } from 'node:fs';
 import { identityRequest } from '../src/identity.mjs';
 const args = Object.fromEntries(
@@ -17,7 +18,7 @@ const uri =
 const transaction = identityRequest(args['--owner'], uri);
 const review = {
   generatedAt: new Date().toISOString(),
-  clientReviewDate: '2026-10-23',
+  clientReviewDate: reviewDate(),
   status: 'UNSIGNED REVIEW ONLY',
   transaction,
   registeredAgentId: null,

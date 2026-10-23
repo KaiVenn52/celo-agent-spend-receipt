@@ -1,3 +1,4 @@
+import { reviewDate } from './review-date.mjs';
 import { chromium } from 'playwright';
 import { mkdirSync, writeFileSync } from 'node:fs';
 import { join, resolve } from 'node:path';
@@ -91,7 +92,7 @@ try {
   checks.push('No unexpected console or HTTP errors');
   const report = {
     checkedAt: new Date().toISOString(),
-    clientReviewDate: '2026-10-23',
+    clientReviewDate: reviewDate(),
     passed: true,
     checks,
     consoleErrors: errors,

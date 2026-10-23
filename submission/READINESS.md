@@ -1,4 +1,4 @@
-# Release readiness — 23 October 2026
+# Release readiness — 24 October 2026
 
 **Local implementation and publication review package prepared. Competition submission is blocked on real external evidence and owner-controlled actions.**
 
@@ -36,3 +36,5 @@ There is no substitute for the missing real-user or mainnet evidence. Local test
 A public hosted service is not treated as a universal competition requirement without an explicit event rule. ERC-8004 also supports inline JSON metadata, so identity registration need not depend on purchasing hosting. The optional metadata-file route prepares that payload without broadcasting.
 
 The 23 October verification update adds read-only identity-event, payment-artifact and participant-history checking. Run npm.cmd run evidence:verify before npm.cmd run readiness. Both commands preserve missing evidence as blockers and never sign or broadcast.
+
+The 24 October release check passed all 54 local tests, rebuilt the runnable package and repeated the rendered UI checks against the local server. Fresh screenshots and the real unsigned quote review are in assets/. Review scripts now derive their date in Asia/Kuala_Lumpur rather than using a fixed date. Historical evidence retains its original timestamps.

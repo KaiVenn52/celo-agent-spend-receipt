@@ -1,3 +1,4 @@
+import { reviewDate } from './review-date.mjs';
 import { execFileSync } from 'node:child_process';
 import { mkdirSync, writeFileSync, readdirSync, readFileSync } from 'node:fs';
 mkdirSync('evidence', { recursive: true });
@@ -17,7 +18,7 @@ writeFileSync(
   JSON.stringify(
     {
       checkedAt: new Date().toISOString(),
-      clientReviewDate: '2026-10-23',
+      clientReviewDate: reviewDate(),
       node: process.version,
       testsPassed: passed,
       testsFailed: failed,
