@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-23T17:57:42.836Z",
+  "checkedAt": "2026-10-24T08:02:58.093Z",
   "clientReviewDate": "2026-10-24",
   "localReady": true,
   "submissionReady": false,
@@ -11,7 +11,7 @@
     "build": true,
     "renderedUi": true,
     "injectedSigningFlow": true,
-    "publicRepository": false,
+    "publicRepository": true,
     "identity": false,
     "mainnetPayment": false,
     "usefulProviderResult": false,
@@ -22,7 +22,6 @@
     "finalOwnerApproval": false
   },
   "blockers": [
-    "publicRepository",
     "identity",
     "mainnetPayment",
     "usefulProviderResult",

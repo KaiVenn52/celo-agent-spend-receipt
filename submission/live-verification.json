@@ -1,6 +1,6 @@
 {
-  "checkedAt": "2026-10-22T19:02:59.302Z",
-  "manifestHash": "5fcec3e14b6c2dc4f8f165c70eb25d448cd82512922ec963bafb243bef2d3c1f",
+  "checkedAt": "2026-10-24T07:57:31.192Z",
+  "manifestHash": "1c3d80bbcdc8aabe75feb95e6453933eec98cee468c89a72da7adf056160704e",
   "network": "Celo mainnet 42220",
   "identity": {
     "verified": false,
@@ -11,8 +11,10 @@
     "error": "Save the actual exported receipt under this project and set payment.receiptFile"
   },
   "publicRepository": {
-    "verified": false,
-    "error": "No reviewed public repository URL supplied"
+    "verified": true,
+    "url": "https://github.com/KaiVenn52/celo-agent-spend-receipt",
+    "defaultBranch": "codex/celo-spend-receipt",
+    "checkedWithoutCredentials": true
   },
   "independentUsers": [],
   "signaturesCreated": 0,

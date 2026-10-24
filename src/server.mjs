@@ -7,6 +7,7 @@ import { Ledger } from './ledger.mjs';
 import { walletRequest, fixtureQuote, fixtureProvider, chainVerifier } from './providers.mjs';
 import { Payments } from './payments.mjs';
 import { sessionOwner } from './sessions.mjs';
+import { IDENTITY_REGISTRY, reviewIdentityRegistration } from './identity.mjs';
 const root = dirname(dirname(fileURLToPath(import.meta.url)));
 export function createApp(ledger, options = {}) {
   const origin = options.origin || null,
@@ -57,7 +58,33 @@ export function createApp(ledger, options = {}) {
               : 'text/javascript',
         );
       }
+      if (req.method === 'GET' && ['/identity', '/identity.js'].includes(url.pathname)) {
+        const file = url.pathname === '/identity' ? 'identity.html' : 'identity.js';
+        return send(
+          res,
+          200,
+          readFileSync(join(root, 'public', file)),
+          file.endsWith('html') ? 'text/html; charset=utf-8' : 'text/javascript',
+        );
+      }
       const owner = sessionOwner(req, res, secret, expectedOrigin.startsWith('https:'));
+      const identityConfig = () => {
+        const manifest = JSON.parse(readFileSync(join(root, 'submission/live-evidence.json'), 'utf8'));
+        const metadata = JSON.parse(
+          readFileSync(join(root, 'submission/agent-registration.draft.json'), 'utf8'),
+        );
+        const expectedURI =
+          'data:application/json;base64,' + Buffer.from(JSON.stringify(metadata)).toString('base64');
+        if (manifest.identity.agentURI !== expectedURI)
+          throw Error('Review the project metadata URI before registration');
+        return {
+          owner: manifest.identity.owner,
+          agentURI: manifest.identity.agentURI,
+          metadata,
+          registry: IDENTITY_REGISTRY,
+        };
+      };
+      if (req.method === 'GET' && url.pathname === '/api/identity') return send(res, 200, identityConfig());
       if (req.method === 'GET' && url.pathname === '/api/health')
         return send(res, 200, {
           mode: 'fixture-and-live-quote',
@@ -92,6 +119,7 @@ export function createApp(ledger, options = {}) {
           '/api/live/pay',
           '/api/live/cancel',
           '/api/live/reconcile',
+          '/api/identity/prepare',
         ].includes(url.pathname)
       )
         return send(res, 404, { error: 'Route not found' });
@@ -111,6 +139,16 @@ export function createApp(ledger, options = {}) {
         if (body.length > 16384) return send(res, 413, { error: 'Request too large' });
       }
       const input = JSON.parse(body);
+      if (url.pathname === '/api/identity/prepare') {
+        const config = identityConfig();
+        if (!config.owner || String(input.owner).toLowerCase() !== config.owner.toLowerCase())
+          throw Error('Connect the approved project owner wallet');
+        const review = await (options.identityReview || reviewIdentityRegistration)(
+          config.owner,
+          config.agentURI,
+        );
+        return send(res, 200, review);
+      }
       if (url.pathname === '/api/demo') {
         const request = walletRequest(input.address),
           id = input.taskId || randomUUID();

@@ -61,7 +61,11 @@ This is deterministic task planning with real payment-protocol integration. No L
 
 Local tests cover the official SDK, real signature math with ephemeral test keys, duplicate/concurrent requests, signer mismatch, quote drift, balance refusal, nonce binding, restart recovery, identity calldata and session isolation. Browser checks cover the rendered workspace and an injected signing/reconciliation loop. A real external 402 quote and public Celo chain read have been observed.
 
-**No real paid call, registered ERC-8004 identity, verified independent user, public project repository, hosted deployment, accepted registration or final submission is claimed.** These remain distinct release gates. See [submission readiness](submission/READINESS.md), [mainnet review](submission/MAINNET_REVIEW.md), [deployment](submission/DEPLOYMENT.md), and [official rules](submission/RULES.md).
+The owner-approved [public repository](https://github.com/KaiVenn52/celo-agent-spend-receipt) is live. GitHub CI and anonymous repository access have been checked.
+
+**No real paid call, registered ERC-8004 identity, verified independent user, hosted deployment, accepted registration or final submission is claimed.** These remain distinct release gates. See [submission readiness](submission/READINESS.md), [mainnet review](submission/MAINNET_REVIEW.md), [deployment](submission/DEPLOYMENT.md), and [official rules](submission/RULES.md).
+
+Open `/identity` to review the approved owner's ERC-8004 registration, inline metadata, current gas and CELO balance. The page checks Celo mainnet and registry code, adds 20% gas-limit headroom and expires the review after 60 seconds. It never asks for a private key. Registration requires the connected owner, explicit metadata confirmation and a separate transaction approval in that wallet. Insufficient balance disables the button; an unconfirmed wallet response is held for manual inspection before another attempt. The server has no identity-broadcast route. The CLI review remains available.
 
 Read-only evidence verification is documented in [submission/EVIDENCE.md](submission/EVIDENCE.md). The gate requires RPC-observed registry and payment checks bound to the current manifest; hand-written verified flags are not accepted as chain proof.
 

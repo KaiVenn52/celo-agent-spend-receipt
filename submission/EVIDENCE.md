@@ -1,6 +1,6 @@
 # Import and independently check live evidence
 
-The publication package deliberately contains no real registration, payment or participant claim. `live-evidence.json` is an empty manifest. Test-only transactions and ephemeral signatures are not imported into it.
+The publication package deliberately contains no real registration, payment or participant claim. `live-evidence.json` records the approved public owner wallet and published repository; chain-proof fields remain unfilled. Test-only transactions and ephemeral signatures are not imported into it.
 
 After an owner-approved real purchase, use **Export receipt** in that same browser session and save the JSON under this project's ignored `private/` directory. Set `payment.receiptFile` to its project-relative path. Fill the actual payer, provider PayTo, transaction hash and authorization nonce from the receipt, not from the fixture demo. `payment.usefulResult` is a separate human review after delivery; it is not inferred from payment success.
 

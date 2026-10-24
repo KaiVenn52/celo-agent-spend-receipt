@@ -1,0 +1,16 @@
+{
+  "checkedAt": "2026-10-24T08:03:38.636Z",
+  "clientReviewDate": "2026-10-24",
+  "passed": true,
+  "checks": [
+    "Approved owner and fixed Celo registry review",
+    "Real read-only gas and balance query",
+    "Unconnected wallet cannot register even after consent",
+    "375px layout without overflow",
+    "Missing wallet extension error is visible"
+  ],
+  "signaturesCreated": 0,
+  "broadcasts": 0,
+  "observedOwnerBalanceCELO": "0",
+  "scope": "Unsigned registration review only; no wallet or mainnet broadcast was tested"
+}

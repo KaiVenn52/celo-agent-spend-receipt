@@ -10,10 +10,14 @@ const files = [
   'src/evidence.mjs',
   'src/server.mjs',
   'public/app.js',
+  'public/identity.js',
 ];
 for (const file of files) execFileSync(process.execPath, ['--check', file], { stdio: 'inherit' });
 mkdirSync('dist', { recursive: true });
 for (const path of ['src', 'public', 'scripts']) cpSync(path, 'dist/' + path, { recursive: true });
+mkdirSync('dist/submission', { recursive: true });
+for (const file of ['live-evidence.json', 'agent-registration.draft.json'])
+  cpSync('submission/' + file, 'dist/submission/' + file);
 for (const path of ['package.json', 'package-lock.json', 'README.md']) cpSync(path, 'dist/' + path);
 writeFileSync(
   'dist/BUILD.json',

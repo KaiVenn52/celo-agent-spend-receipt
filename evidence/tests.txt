@@ -2,333 +2,363 @@ TAP version 13
 # Subtest: identity evidence checks official event, canonical block and current owner
 ok 1 - identity evidence checks official event, canonical block and current owner
   ---
-  duration_ms: 20.6187
+  duration_ms: 21.221
   type: 'test'
   ...
 # Subtest: identity evidence rejects wrong registry, changed ownership and pending confirmations
 ok 2 - identity evidence rejects wrong registry, changed ownership and pending confirmations
   ---
-  duration_ms: 6.7453
+  duration_ms: 7.7654
   type: 'test'
   ...
 # Subtest: payment evidence binds real chain verification to one exported task and request
 ok 3 - payment evidence binds real chain verification to one exported task and request
   ---
-  duration_ms: 3.6373
+  duration_ms: 6.7518
   type: 'test'
   ...
 # Subtest: fixture export and modified request cannot pass as mainnet evidence
 ok 4 - fixture export and modified request cannot pass as mainnet evidence
   ---
-  duration_ms: 1.2837
+  duration_ms: 1.11
   type: 'test'
   ...
 # Subtest: wrong manifest payer, transaction or nonce is rejected
 ok 5 - wrong manifest payer, transaction or nonce is rejected
   ---
-  duration_ms: 9.2052
+  duration_ms: 1.0943
   type: 'test'
   ...
 # Subtest: a structurally valid result cannot replace independent nonce verification
 ok 6 - a structurally valid result cannot replace independent nonce verification
   ---
-  duration_ms: 0.8572
+  duration_ms: 1.2692
   type: 'test'
   ...
 # Subtest: participant evidence keeps onchain facts and human independence review separate
 ok 7 - participant evidence keeps onchain facts and human independence review separate
   ---
-  duration_ms: 2.5299
+  duration_ms: 2.3631
   type: 'test'
   ...
 # Subtest: self wallets, builder funding and post-event activity cannot count
 ok 8 - self wallets, builder funding and post-event activity cannot count
   ---
-  duration_ms: 2.4392
+  duration_ms: 1.7286
   type: 'test'
   ...
 # Subtest: identity transaction review pins registry, owner and metadata without signing
 ok 9 - identity transaction review pins registry, owner and metadata without signing
   ---
-  duration_ms: 64.2641
+  duration_ms: 13.746
+  type: 'test'
+  ...
+# Subtest: identity review does not expose credential-bearing RPC errors
+ok 10 - identity review does not expose credential-bearing RPC errors
+  ---
+  duration_ms: 2.8342
+  type: 'test'
+  ...
+# Subtest: identity gas review keeps a zero-balance owner unsigned and applies rounded headroom
+ok 11 - identity gas review keeps a zero-balance owner unsigned and applies rounded headroom
+  ---
+  duration_ms: 1.9087
+  type: 'test'
+  ...
+# Subtest: identity gas review accepts adequate balance without sending a transaction
+ok 12 - identity gas review accepts adequate balance without sending a transaction
+  ---
+  duration_ms: 1.3417
+  type: 'test'
+  ...
+# Subtest: identity gas review refuses a different chain or absent registry code
+ok 13 - identity gas review refuses a different chain or absent registry code
+  ---
+  duration_ms: 2.189
   type: 'test'
   ...
 # Subtest: identity review refuses absent owner, insecure metadata or embedded credentials
-ok 10 - identity review refuses absent owner, insecure metadata or embedded credentials
+ok 14 - identity review refuses absent owner, insecure metadata or embedded credentials
   ---
-  duration_ms: 10.128
+  duration_ms: 0.8102
   type: 'test'
   ...
 # Subtest: inline registration metadata does not require buying a hosting plan
-ok 11 - inline registration metadata does not require buying a hosting plan
+ok 15 - inline registration metadata does not require buying a hosting plan
   ---
-  duration_ms: 32.1737
+  duration_ms: 5.9976
   type: 'test'
   ...
 # Subtest: integer units reject decimals, negatives, zero, overflow and coercion
-ok 12 - integer units reject decimals, negatives, zero, overflow and coercion
+ok 16 - integer units reject decimals, negatives, zero, overflow and coercion
   ---
-  duration_ms: 15.8605
+  duration_ms: 3.8487
   type: 'test'
   ...
 # Subtest: wallet request validates addresses
-ok 13 - wallet request validates addresses
+ok 17 - wallet request validates addresses
   ---
-  duration_ms: 0.5812
+  duration_ms: 0.6275
   type: 'test'
   ...
 # Subtest: settled fixture consumes budget and labels its evidence
-ok 14 - settled fixture consumes budget and labels its evidence
+ok 18 - settled fixture consumes budget and labels its evidence
   ---
-  duration_ms: 100.38
+  duration_ms: 22.3583
   type: 'test'
   ...
 # Subtest: same idempotency key executes provider once
-ok 15 - same idempotency key executes provider once
+ok 19 - same idempotency key executes provider once
   ---
-  duration_ms: 11.2842
+  duration_ms: 12.2261
   type: 'test'
   ...
 # Subtest: changed quote on same idempotency key is rejected
-ok 16 - changed quote on same idempotency key is rejected
+ok 20 - changed quote on same idempotency key is rejected
   ---
-  duration_ms: 18.4129
+  duration_ms: 5.3075
   type: 'test'
   ...
 # Subtest: new id cannot bypass request deduplication
-ok 17 - new id cannot bypass request deduplication
+ok 21 - new id cannot bypass request deduplication
   ---
-  duration_ms: 22.2016
+  duration_ms: 9.4534
   type: 'test'
   ...
 # Subtest: insufficient budget prevents provider execution
-ok 18 - insufficient budget prevents provider execution
+ok 22 - insufficient budget prevents provider execution
   ---
-  duration_ms: 10.3449
+  duration_ms: 2.6389
   type: 'test'
   ...
 # Subtest: exact budget is accepted
-ok 19 - exact budget is accepted
+ok 23 - exact budget is accepted
   ---
-  duration_ms: 3.1649
+  duration_ms: 2.9094
   type: 'test'
   ...
 # Subtest: expired quote is rejected
-ok 20 - expired quote is rejected
+ok 24 - expired quote is rejected
   ---
-  duration_ms: 2.5485
+  duration_ms: 2.2686
   type: 'test'
   ...
 # Subtest: an identical completed request is recoverable after its quote expires
-ok 21 - an identical completed request is recoverable after its quote expires
+ok 25 - an identical completed request is recoverable after its quote expires
   ---
-  duration_ms: 6.1729
+  duration_ms: 5.0418
   type: 'test'
   ...
 # Subtest: modified request cannot reuse quote
-ok 22 - modified request cannot reuse quote
+ok 26 - modified request cannot reuse quote
   ---
-  duration_ms: 1.7871
+  duration_ms: 2.5965
   type: 'test'
   ...
 # Subtest: wrong chain and token are refused
-ok 23 - wrong chain and token are refused
+ok 27 - wrong chain and token are refused
   ---
-  duration_ms: 3.4957
+  duration_ms: 2.7837
   type: 'test'
   ...
 # Subtest: fixture evidence cannot enter a live task
-ok 24 - fixture evidence cannot enter a live task
+ok 28 - fixture evidence cannot enter a live task
   ---
-  duration_ms: 6.3691
+  duration_ms: 5.0605
   type: 'test'
   ...
 # Subtest: timeout reserves full budget and replay does not retry
-ok 25 - timeout reserves full budget and replay does not retry
+ok 29 - timeout reserves full budget and replay does not retry
   ---
-  duration_ms: 13.6032
+  duration_ms: 4.3533
   type: 'test'
   ...
 # Subtest: explicit unsettled failure releases budget but remains deduplicated
-ok 26 - explicit unsettled failure releases budget but remains deduplicated
+ok 30 - explicit unsettled failure releases budget but remains deduplicated
   ---
-  duration_ms: 6.8172
+  duration_ms: 3.3591
   type: 'test'
   ...
 # Subtest: non-definitive rejection does not release budget
-ok 27 - non-definitive rejection does not release budget
+ok 31 - non-definitive rejection does not release budget
   ---
-  duration_ms: 4.31
+  duration_ms: 2.9525
   type: 'test'
   ...
 # Subtest: live provider claim is never automatically verified
-ok 28 - live provider claim is never automatically verified
+ok 32 - live provider claim is never automatically verified
   ---
-  duration_ms: 9.6058
+  duration_ms: 2.6396
   type: 'test'
   ...
 # Subtest: concurrent distinct calls cannot overrun a budget
-ok 29 - concurrent distinct calls cannot overrun a budget
+ok 33 - concurrent distinct calls cannot overrun a budget
   ---
-  duration_ms: 6.4961
+  duration_ms: 3.0307
   type: 'test'
   ...
 # Subtest: restart converts in-flight payment to UNKNOWN and retains budget
-ok 30 - restart converts in-flight payment to UNKNOWN and retains budget
+ok 34 - restart converts in-flight payment to UNKNOWN and retains budget
   ---
-  duration_ms: 109.8141
+  duration_ms: 89.6499
   type: 'test'
   ...
 # Subtest: task policy cannot be enlarged after creation
-ok 31 - task policy cannot be enlarged after creation
+ok 35 - task policy cannot be enlarged after creation
   ---
-  duration_ms: 1.6541
+  duration_ms: 2.0233
   type: 'test'
   ...
 # Subtest: forged reconciliation fails closed
-ok 32 - forged reconciliation fails closed
+ok 36 - forged reconciliation fails closed
   ---
-  duration_ms: 7.8768
+  duration_ms: 3.3119
   type: 'test'
   ...
 # Subtest: verified transfer consumes reserved budget; same tx cannot be reused
-ok 33 - verified transfer consumes reserved budget; same tx cannot be reused
+ok 37 - verified transfer consumes reserved budget; same tx cannot be reused
   ---
-  duration_ms: 13.5691
+  duration_ms: 4.6437
   type: 'test'
   ...
 # Subtest: official SDK prepares exact unsigned EIP-3009 and reserves atomic budget
-ok 34 - official SDK prepares exact unsigned EIP-3009 and reserves atomic budget
+ok 38 - official SDK prepares exact unsigned EIP-3009 and reserves atomic budget
   ---
-  duration_ms: 47.3312
+  duration_ms: 14.4627
   type: 'test'
   ...
 # Subtest: repeated and concurrent prepares preserve one authorization nonce
-ok 35 - repeated and concurrent prepares preserve one authorization nonce
+ok 39 - repeated and concurrent prepares preserve one authorization nonce
   ---
-  duration_ms: 10.0136
+  duration_ms: 5.3322
   type: 'test'
   ...
 # Subtest: real SDK signature is recovered and signed transport is invoked exactly once
-ok 36 - real SDK signature is recovered and signed transport is invoked exactly once
+ok 40 - real SDK signature is recovered and signed transport is invoked exactly once
   ---
-  duration_ms: 199.0056
+  duration_ms: 110.151
   type: 'test'
   ...
 # Subtest: wrong signer never reaches payment transport
-ok 37 - wrong signer never reaches payment transport
+ok 41 - wrong signer never reaches payment transport
   ---
-  duration_ms: 51.1564
+  duration_ms: 30.9698
   type: 'test'
   ...
 # Subtest: timeout after signed request retains full budget and cannot be replayed
-ok 38 - timeout after signed request retains full budget and cannot be replayed
+ok 42 - timeout after signed request retains full budget and cannot be replayed
   ---
-  duration_ms: 27.1241
+  duration_ms: 16.0738
   type: 'test'
   ...
 # Subtest: unsigned cancellation releases budget and prevents later submission
-ok 39 - unsigned cancellation releases budget and prevents later submission
+ok 43 - unsigned cancellation releases budget and prevents later submission
   ---
-  duration_ms: 18.5531
+  duration_ms: 9.8881
   type: 'test'
   ...
 # Subtest: cross-session proposal reads and insufficient budget are refused
-ok 40 - cross-session proposal reads and insufficient budget are refused
+ok 44 - cross-session proposal reads and insufficient budget are refused
   ---
-  duration_ms: 2.8637
+  duration_ms: 2.5468
   type: 'test'
   ...
 # Subtest: quote drift is rejected before any wallet signing
-ok 41 - quote drift is rejected before any wallet signing
+ok 45 - quote drift is rejected before any wallet signing
   ---
-  duration_ms: 3.1195
+  duration_ms: 1.8972
   type: 'test'
   ...
 # Subtest: malformed token domains, alternative resources and long authorizations fail closed
-ok 42 - malformed token domains, alternative resources and long authorizations fail closed
+ok 46 - malformed token domains, alternative resources and long authorizations fail closed
   ---
-  duration_ms: 1.4342
+  duration_ms: 0.5354
   type: 'test'
   ...
 # Subtest: insufficient token balance fails before authorization or reservation
-ok 43 - insufficient token balance fails before authorization or reservation
+ok 47 - insufficient token balance fails before authorization or reservation
   ---
-  duration_ms: 3.856
+  duration_ms: 2.0627
   type: 'test'
   ...
 # Subtest: simultaneous signed submissions send at most once across the async verifier
-ok 44 - simultaneous signed submissions send at most once across the async verifier
+ok 48 - simultaneous signed submissions send at most once across the async verifier
   ---
-  duration_ms: 41.1591
+  duration_ms: 27.1609
   type: 'test'
   ...
 # Subtest: unpaid quote reads real x402 v1 shape without signing
-ok 45 - unpaid quote reads real x402 v1 shape without signing
+ok 49 - unpaid quote reads real x402 v1 shape without signing
   ---
-  duration_ms: 46.1788
+  duration_ms: 5.7239
   type: 'test'
   ...
 # Subtest: unpaid quote refuses wrong network, token, version and HTTP status
-ok 46 - unpaid quote refuses wrong network, token, version and HTTP status
+ok 50 - unpaid quote refuses wrong network, token, version and HTTP status
   ---
-  duration_ms: 1.5281
+  duration_ms: 2.4827
   type: 'test'
   ...
 # Subtest: verifier checks exact transfer and canonical confirmations
-ok 47 - verifier checks exact transfer and canonical confirmations
+ok 51 - verifier checks exact transfer and canonical confirmations
   ---
-  duration_ms: 33.1493
+  duration_ms: 5.6365
   type: 'test'
   ...
 # Subtest: verifier refuses failed tx, wrong recipient, sender and amount
-ok 48 - verifier refuses failed tx, wrong recipient, sender and amount
+ok 52 - verifier refuses failed tx, wrong recipient, sender and amount
   ---
-  duration_ms: 3.4715
+  duration_ms: 2.8858
   type: 'test'
   ...
 # Subtest: verifier refuses pending and reorganized transactions
-ok 49 - verifier refuses pending and reorganized transactions
+ok 53 - verifier refuses pending and reorganized transactions
   ---
-  duration_ms: 20.9554
+  duration_ms: 2.6137
   type: 'test'
   ...
 # Subtest: verifier rejects wrong chain and RPC errors
-ok 50 - verifier rejects wrong chain and RPC errors
+ok 54 - verifier rejects wrong chain and RPC errors
   ---
-  duration_ms: 0.8766
+  duration_ms: 1.6365
   type: 'test'
   ...
 # Subtest: a transfer from another task cannot pass without the exact authorization nonce
-ok 51 - a transfer from another task cannot pass without the exact authorization nonce
+ok 55 - a transfer from another task cannot pass without the exact authorization nonce
   ---
-  duration_ms: 14.5457
+  duration_ms: 4.7796
+  type: 'test'
+  ...
+# Subtest: identity review pins the approved owner and exposes no server-side signing route
+ok 56 - identity review pins the approved owner and exposes no server-side signing route
+  ---
+  duration_ms: 179.8993
   type: 'test'
   ...
 # Subtest: local HTTP flow, replay, export and budget rejection
-ok 52 - local HTTP flow, replay, export and budget rejection
+ok 57 - local HTTP flow, replay, export and budget rejection
   ---
-  duration_ms: 431.6818
+  duration_ms: 121.2775
   type: 'test'
   ...
 # Subtest: session owners cannot view, replay or list another browser task
-ok 53 - session owners cannot view, replay or list another browser task
+ok 58 - session owners cannot view, replay or list another browser task
   ---
-  duration_ms: 90.4291
+  duration_ms: 62.8217
   type: 'test'
   ...
 # Subtest: external origins, forged Host and live execution are refused
-ok 54 - external origins, forged Host and live execution are refused
+ok 59 - external origins, forged Host and live execution are refused
   ---
-  duration_ms: 53.1707
+  duration_ms: 29.8045
   type: 'test'
   ...
-1..54
-# tests 54
+1..59
+# tests 59
 # suites 0
-# pass 54
+# pass 59
 # fail 0
 # cancelled 0
 # skipped 0
 # todo 0
-# duration_ms 69229.8634
+# duration_ms 3759.0841

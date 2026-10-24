@@ -22,7 +22,9 @@ Build with buy. Pinned @celo/buy-core 0.8.3, Celo mainnet 42220, USDC, x402 v1, 
 
 Completed: local product, unit/integration tests, actual signature math against injected transports, responsive browser QA, a fully injected browser signing loop, real unsigned service quote and public Celo chain read.
 
-Not yet evidenced: a real paid provider result, actual mainnet settlement, registered Agent ID, verified independent participant, public project repository/deployment, accepted registration or final submission. These fields must be filled from real artifacts in live-evidence.json before this draft can be submitted as a qualifying project. The submission gate intentionally remains false while they are missing.
+The owner-approved repository is public at https://github.com/KaiVenn52/celo-agent-spend-receipt, with CI validation and anonymous access checked. The local identity-review page prepares a wallet-owned registration with current gas and balance checks; no identity has been registered.
+
+Not yet evidenced: a real paid provider result, actual mainnet settlement, registered Agent ID, verified independent participant, hosted deployment, accepted registration or final submission. These fields must be filled from real artifacts in live-evidence.json before this draft can be submitted as a qualifying project. The submission gate intentionally remains false while they are missing.
 
 ## Links and proof to fill after approval
 

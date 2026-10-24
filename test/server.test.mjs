@@ -36,6 +36,32 @@ function client(base) {
 }
 const body = { address: '0x' + '1'.repeat(40), budget: '20000', taskId: 'demo' };
 
+test('identity review pins the approved owner and exposes no server-side signing route', async () => {
+  let calls = 0;
+  const a = await app({
+      identityReview: async (owner, uri) => {
+        calls++;
+        return { owner, uri, signaturesCreated: 0, broadcasts: 0 };
+      },
+    }),
+    request = client(a.base);
+  try {
+    assert.equal((await request('/identity')).status, 200);
+    assert.equal((await request('/identity.js')).status, 200);
+    const config = await (await request('/api/identity')).json();
+    assert.equal((await request('/api/identity/prepare', { owner: body.address })).status, 400);
+    assert.equal(calls, 0);
+    const review = await (await request('/api/identity/prepare', { owner: config.owner })).json();
+    assert.equal(review.owner, config.owner);
+    assert.equal(review.uri, config.agentURI);
+    assert.equal(review.broadcasts, 0);
+    assert.equal((await request('/api/identity/send', {})).status, 404);
+    assert.equal(calls, 1);
+  } finally {
+    await a.close();
+  }
+});
+
 test('local HTTP flow, replay, export and budget rejection', async () => {
   const a = await app(),
     request = client(a.base);
