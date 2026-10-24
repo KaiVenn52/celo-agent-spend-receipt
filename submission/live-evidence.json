@@ -1,5 +1,5 @@
 {
-  "publicRepo": null,
+  "publicRepo": "https://github.com/KaiVenn52/celo-agent-spend-receipt",
   "deploymentUrl": null,
   "registration": {
     "accepted": false,
@@ -7,12 +7,12 @@
   },
   "identity": {
     "agentId": null,
-    "owner": null,
+    "owner": "0xD30BbB80c863c9B94622EF92337AaD65148D2EC3",
     "transaction": null,
-    "agentURI": null
+    "agentURI": "data:application/json;base64,eyJ0eXBlIjoiaHR0cHM6Ly9laXBzLmV0aGVyZXVtLm9yZy9FSVBTL2VpcC04MDA0I3JlZ2lzdHJhdGlvbi12MSIsIm5hbWUiOiJBZ2VudCBTcGVuZCBSZWNlaXB0IiwiZGVzY3JpcHRpb24iOiJCdWRnZXQtY29udHJvbGxlZCBDZWxvIHdhbGxldC1kYXRhIGNoZWNrcyB3aXRoIGV4cGxpY2l0IHBheW1lbnQgZXZpZGVuY2UgbGV2ZWxzLiBMb2NhbCBwcm90b3R5cGUgb25seTsgbm8gaG9zdGVkIGVuZHBvaW50IG9yIHJlZ2lzdGVyZWQgaWRlbnRpdHkgeWV0LiIsInNlcnZpY2VzIjpbXSwiYWN0aXZlIjpmYWxzZSwieDQwMlN1cHBvcnQiOmZhbHNlLCJzdXBwb3J0ZWRUcnVzdCI6W119"
   },
   "payment": {
-    "payer": null,
+    "payer": "0xD30BbB80c863c9B94622EF92337AaD65148D2EC3",
     "transaction": null,
     "providerPayTo": null,
     "authorizationNonce": null,
@@ -23,6 +23,8 @@
   "ownerReviewedTerms": false,
   "remoteOnlyEligibilityConfirmed": false,
   "finalSubmissionApproved": false,
-  "builderWallets": [],
+  "builderWallets": [
+    "0xD30BbB80c863c9B94622EF92337AaD65148D2EC3"
+  ],
   "mainFunderWallets": []
 }
